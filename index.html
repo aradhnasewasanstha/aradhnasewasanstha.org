@@ -171,6 +171,13 @@
       .info-row { grid-template-columns: 1fr; gap: 3px; }
       nav a { font-size: .85rem; }
     }
+
+    .photo-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 24px; }
+    .photo-gallery figure { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: 0 5px 18px rgba(15, 55, 42, .10); }
+    .photo-gallery img { display: block; width: 100%; height: 280px; object-fit: cover; }
+    .photo-gallery figcaption { padding: 14px; text-align: center; font-weight: 700; color: var(--green); }
+    @media (max-width: 480px) { .photo-gallery img { height: 220px; } }
+
   </style>
 </head>
 <body class="lang-both">
@@ -301,15 +308,19 @@
       <div class="container">
         <div class="section-kicker"><span class="en">Moments of service</span><span class="hi">सेवा के पल</span></div>
         <h2 class="section-title"><span class="en">Photo gallery</span><span class="hi">फोटो गैलरी</span></h2>
-        <p class="section-intro en">Photos of the organisation’s real activities can be added here. Upload your photos to the <strong>gallery</strong> folder in the GitHub repository, then replace these sample tiles with the uploaded filenames.</p>
-        <p class="section-intro hi">संस्था की वास्तविक गतिविधियों की तस्वीरें यहाँ जोड़ी जा सकती हैं। तस्वीरें GitHub repository के <strong>gallery</strong> folder में upload करें, फिर इन sample tiles को uploaded file names से बदलें।</p>
-        <div class="objective-grid">
-          <article class="objective"><div class="objective-num">01</div><div><h3 class="en">Community service</h3><h3 class="hi">समुदाय सेवा</h3><p class="en">Add a photo from a real community service activity.</p><p class="hi">वास्तविक समुदाय सेवा गतिविधि की तस्वीर जोड़ें।</p></div></article>
-          <article class="objective"><div class="objective-num">02</div><div><h3 class="en">Education and awareness</h3><h3 class="hi">शिक्षा एवं जागरूकता</h3><p class="en">Add a photo from an education or awareness programme.</p><p class="hi">शिक्षा या जागरूकता कार्यक्रम की तस्वीर जोड़ें।</p></div></article>
-          <article class="objective"><div class="objective-num">03</div><div><h3 class="en">Women’s skills</h3><h3 class="hi">महिला कौशल विकास</h3><p class="en">Add a photo from a genuine training activity.</p><p class="hi">वास्तविक प्रशिक्षण गतिविधि की तस्वीर जोड़ें।</p></div></article>
-          <article class="objective"><div class="objective-num">04</div><div><h3 class="en">Events and programmes</h3><h3 class="hi">कार्यक्रम एवं आयोजन</h3><p class="en">Add photos from the organisation’s own events.</p><p class="hi">संस्था के अपने कार्यक्रमों की तस्वीरें जोड़ें।</p></div></article>
+        <p class="section-intro en">Photos from Aradhna Sewa Sanstha's service activities.</p>
+        <p class="section-intro hi">आराधना सेवा संस्था की सेवा गतिविधियों की तस्वीरें।</p>
+        <div class="photo-gallery">
+          <figure>
+            <img src="gallery/sewa-camp-1.jpg.jpeg" alt="Aradhna Sewa Sanstha service camp, photo 1" loading="lazy">
+            <figcaption><span class="en">Sewa Camp 1</span><span class="hi">सेवा शिविर 1</span></figcaption>
+          </figure>
+          <figure>
+            <img src="gallery/sewa-camp-2.jpg.jpeg" alt="Aradhna Sewa Sanstha service camp, photo 2" loading="lazy">
+            <figcaption><span class="en">Sewa Camp 2</span><span class="hi">सेवा शिविर 2</span></figcaption>
+          </figure>
         </div>
-        <div class="note"><span class="en">Please publish only photos the organisation is authorised to share, especially when children or other identifiable people appear.</span><span class="hi">केवल वही तस्वीरें प्रकाशित करें जिन्हें साझा करने की संस्था को अनुमति है—विशेषकर बच्चों या पहचान योग्य व्यक्तियों की तस्वीरों के लिए।</span></div>
+        <div class="note"><span class="en">More photos can be added to the gallery folder in the GitHub repository and then listed here.</span><span class="hi">और तस्वीरें GitHub repository के gallery folder में upload करके यहाँ जोड़ी जा सकती हैं।</span></div>
       </div>
     </section>
 
@@ -338,12 +349,7 @@
             <p>Quarters No. 56/A, Railway Colony,<br>Kathgodam, District Nainital,<br>Uttarakhand, India</p>
             <p><strong>NGO Service Number:</strong> <a href="tel:9808929000">9808929000</a></p>
             <p><strong>Sachiv / Secretary, Mr. Raj Gourh:</strong> <a href="tel:8755642002">8755642002</a></p>
-<p>
-  <strong>Email:</strong>
-  <a href="mailto:aradhnasewasanstha@gmail.com">
-    aradhnasewasanstha@gmail.com
-  </a>
-</p>
+            <p><strong>Email / ईमेल:</strong> <a href="mailto:aradhnasewasanstha@gmail.com">aradhnasewasanstha@gmail.com</a></p>
           </div>
           <div class="map-placeholder">
             <div>
