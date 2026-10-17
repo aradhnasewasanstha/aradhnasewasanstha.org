@@ -54,6 +54,7 @@
       gap: 20px;
     }
     .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 230px; }
+    .brand-logo { width: 54px; height: 54px; object-fit: contain; border-radius: 50%; background: #fff; border: 2px solid #e7c77e; padding: 2px; flex: 0 0 auto; }
     .brand-mark {
       width: 48px; height: 48px; border-radius: 50%;
       display: grid; place-items: center;
@@ -135,6 +136,10 @@
     .objective p { margin: 0; color: var(--muted); font-size: .94rem; }
     .note { border-left: 4px solid var(--gold); background: #fff8e8; padding: 16px 18px; border-radius: 0 12px 12px 0; color: #5d4b27; margin-top: 24px; font-size: .93rem; }
     .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 28px; }
+    .contact-card a:not(.btn) { color: var(--green); font-weight: 800; }
+    .objective-grid { min-width: 0; }
+    .objective { min-width: 0; }
+    .objective p, .objective h3 { overflow-wrap: anywhere; }
     .contact-card { border: 1px solid var(--line); border-radius: 20px; padding: 26px; background: white; }
     .contact-card h3 { color: var(--green-dark); margin-top: 0; }
     .contact-card p { margin: 8px 0; color: var(--muted); }
@@ -176,13 +181,15 @@
   <header>
     <div class="nav">
       <a class="brand" href="#home" aria-label="Aradhna Sewa Sanstha home">
-        <div class="brand-mark">अ</div>
+        <img class="brand-logo" src="assets/aradhna-logo.png" alt="Aradhna Sewa Sanstha logo">
         <div class="brand-name">Aradhna Sewa Sanstha<small>आराधना सेवा संस्था</small></div>
       </a>
       <nav aria-label="Main navigation">
         <a href="#home"><span class="en">Home</span><span class="hi">होम</span></a>
         <a href="#about"><span class="en">About</span><span class="hi">परिचय</span></a>
         <a href="#objectives"><span class="en">Objectives</span><span class="hi">उद्देश्य</span></a>
+        <a href="#gallery"><span class="en">Gallery</span><span class="hi">गैलरी</span></a>
+        <a href="#donate"><span class="en">Donate</span><span class="hi">दान</span></a>
         <a href="#contact"><span class="en">Contact</span><span class="hi">संपर्क</span></a>
         <button class="lang-button" id="languageToggle" type="button" aria-label="Switch language">हिंदी / English</button>
       </nav>
@@ -289,6 +296,37 @@
       </div>
     </section>
 
+
+    <section class="objectives" id="gallery">
+      <div class="container">
+        <div class="section-kicker"><span class="en">Moments of service</span><span class="hi">सेवा के पल</span></div>
+        <h2 class="section-title"><span class="en">Photo gallery</span><span class="hi">फोटो गैलरी</span></h2>
+        <p class="section-intro en">Photos of the organisation’s real activities can be added here. Upload your photos to the <strong>gallery</strong> folder in the GitHub repository, then replace these sample tiles with the uploaded filenames.</p>
+        <p class="section-intro hi">संस्था की वास्तविक गतिविधियों की तस्वीरें यहाँ जोड़ी जा सकती हैं। तस्वीरें GitHub repository के <strong>gallery</strong> folder में upload करें, फिर इन sample tiles को uploaded file names से बदलें।</p>
+        <div class="objective-grid">
+          <article class="objective"><div class="objective-num">01</div><div><h3 class="en">Community service</h3><h3 class="hi">समुदाय सेवा</h3><p class="en">Add a photo from a real community service activity.</p><p class="hi">वास्तविक समुदाय सेवा गतिविधि की तस्वीर जोड़ें।</p></div></article>
+          <article class="objective"><div class="objective-num">02</div><div><h3 class="en">Education and awareness</h3><h3 class="hi">शिक्षा एवं जागरूकता</h3><p class="en">Add a photo from an education or awareness programme.</p><p class="hi">शिक्षा या जागरूकता कार्यक्रम की तस्वीर जोड़ें।</p></div></article>
+          <article class="objective"><div class="objective-num">03</div><div><h3 class="en">Women’s skills</h3><h3 class="hi">महिला कौशल विकास</h3><p class="en">Add a photo from a genuine training activity.</p><p class="hi">वास्तविक प्रशिक्षण गतिविधि की तस्वीर जोड़ें।</p></div></article>
+          <article class="objective"><div class="objective-num">04</div><div><h3 class="en">Events and programmes</h3><h3 class="hi">कार्यक्रम एवं आयोजन</h3><p class="en">Add photos from the organisation’s own events.</p><p class="hi">संस्था के अपने कार्यक्रमों की तस्वीरें जोड़ें।</p></div></article>
+        </div>
+        <div class="note"><span class="en">Please publish only photos the organisation is authorised to share, especially when children or other identifiable people appear.</span><span class="hi">केवल वही तस्वीरें प्रकाशित करें जिन्हें साझा करने की संस्था को अनुमति है—विशेषकर बच्चों या पहचान योग्य व्यक्तियों की तस्वीरों के लिए।</span></div>
+      </div>
+    </section>
+
+    <section id="donate">
+      <div class="container">
+        <div class="section-kicker"><span class="en">Support the mission</span><span class="hi">उद्देश्य में सहयोग दें</span></div>
+        <h2 class="section-title"><span class="en">Donation and support</span><span class="hi">दान एवं सहयोग</span></h2>
+        <div class="contact-card">
+          <p class="en">If you would like to support Aradhna Sewa Sanstha, please contact the organisation using the official numbers below to confirm its authorised donation process before sending money.</p>
+          <p class="hi">यदि आप आराधना सेवा संस्था को सहयोग देना चाहते हैं, तो राशि भेजने से पहले नीचे दिए गए आधिकारिक नंबरों पर संपर्क करके संस्था की अधिकृत दान प्रक्रिया की पुष्टि करें।</p>
+          <p class="en"><strong>No bank account, UPI ID or payment QR has been published here</strong> because verified donation details were not provided.</p>
+          <p class="hi"><strong>यहाँ बैंक खाता, UPI ID या payment QR प्रकाशित नहीं किया गया है</strong>, क्योंकि सत्यापित दान विवरण उपलब्ध नहीं कराए गए हैं।</p>
+          <a class="btn btn-primary" href="tel:9808929000"><span class="en">Call NGO service number</span><span class="hi">NGO सेवा नंबर पर कॉल करें</span></a>
+        </div>
+      </div>
+    </section>
+
     <section id="contact">
       <div class="container">
         <div class="section-kicker"><span class="en">Find us</span><span class="hi">हमसे जुड़ें</span></div>
@@ -298,8 +336,10 @@
             <h3><span class="en">Organisation address</span><span class="hi">संस्था का पता</span></h3>
             <p><strong>Aradhna Sewa Sanstha</strong></p>
             <p>Quarters No. 56/A, Railway Colony,<br>Kathgodam, District Nainital,<br>Uttarakhand, India</p>
-            <p class="en">Phone number and email have not been published here because they were not included in the supplied document.</p>
-            <p class="hi">दिए गए दस्तावेज़ में फोन नंबर और ईमेल उपलब्ध नहीं थे, इसलिए उन्हें यहाँ शामिल नहीं किया गया है।</p>
+            <p><strong>NGO Service Number:</strong> <a href="tel:9808929000">9808929000</a></p>
+            <p><strong>Sachiv / Secretary, Mr. Raj Gourh:</strong> <a href="tel:8755642002">8755642002</a></p>
+            <p class="en">Email address was not provided.</p>
+            <p class="hi">ईमेल पता उपलब्ध नहीं कराया गया है।</p>
           </div>
           <div class="map-placeholder">
             <div>
