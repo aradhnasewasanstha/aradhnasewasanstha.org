@@ -2,430 +2,403 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aradhna Sewa Sanstha — a non-government social welfare organisation based in Kathgodam, Nainital, Uttarakhand.">
-  <meta name="theme-color" content="#155e4b">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#104d3d">
+  <meta name="description" content="Aradhna Sewa Sanstha — charitable and social welfare objectives in Kathgodam, Nainital, Uttarakhand. आराधना सेवा संस्था — समाज सेवा और जनकल्याण।">
   <title>Aradhna Sewa Sanstha | आराधना सेवा संस्था</title>
   <style>
     :root {
-      --green: #155e4b;
-      --green-dark: #0d4236;
-      --green-light: #eaf5ef;
-      --gold: #d9a441;
-      --ink: #1f2933;
-      --muted: #5f6b66;
-      --paper: #fffdf8;
-      --white: #ffffff;
-      --line: #e3e9e4;
-      --shadow: 0 16px 45px rgba(15, 55, 42, .10);
+      --forest: #104d3d;
+      --forest-deep: #08382d;
+      --forest-mid: #17634d;
+      --mint: #edf6f0;
+      --cream: #fffaf0;
+      --gold: #e4b85d;
+      --ink: #1e302a;
+      --muted: #617169;
+      --line: #dfe9e2;
+      --white: #fff;
+      --shadow: 0 18px 50px rgba(8, 56, 45, .10);
+      --radius: 22px;
+      --max: 1180px;
     }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
     body {
-      margin: 0;
+      margin: 0; color: var(--ink); background: #fff;
       font-family: "Noto Sans Devanagari", "Segoe UI", Arial, sans-serif;
-      color: var(--ink);
-      background: var(--paper);
-      line-height: 1.7;
+      line-height: 1.7; -webkit-font-smoothing: antialiased;
     }
+    img { max-width: 100%; }
     a { color: inherit; }
-    .topbar {
-      background: var(--green-dark);
-      color: #f5fff8;
-      font-size: .9rem;
-      padding: 8px 20px;
-      text-align: center;
-    }
-    header {
-      background: rgba(255,255,255,.97);
-      border-bottom: 1px solid var(--line);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      backdrop-filter: blur(12px);
-    }
-    .nav {
-      max-width: 1120px;
-      margin: auto;
-      padding: 14px 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 230px; }
-    .brand-logo { width: 54px; height: 54px; object-fit: contain; border-radius: 50%; background: #fff; border: 2px solid #e7c77e; padding: 2px; flex: 0 0 auto; }
-    .brand-mark {
-      width: 48px; height: 48px; border-radius: 50%;
-      display: grid; place-items: center;
-      color: white; background: var(--green); border: 3px solid #e7c77e;
-      font-weight: 800; font-size: 1.15rem;
-    }
-    .brand-name { font-weight: 800; line-height: 1.25; color: var(--green-dark); }
-    .brand-name small { display: block; font-size: .78rem; color: var(--muted); font-weight: 600; margin-top: 3px; }
-    nav { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
-    nav a { font-size: .92rem; font-weight: 650; text-decoration: none; color: #34443d; }
-    nav a:hover { color: var(--green); }
-    .lang-button {
-      border: 1px solid var(--green); background: white; color: var(--green);
-      padding: 8px 13px; border-radius: 999px; cursor: pointer; font-weight: 700;
-    }
-    .hero {
-      background:
-        radial-gradient(circle at 85% 18%, rgba(217,164,65,.22), transparent 26%),
-        linear-gradient(125deg, #0d4236 0%, #155e4b 58%, #27745b 100%);
-      color: white;
-      overflow: hidden;
-    }
-    .hero-inner {
-      max-width: 1120px; margin: auto; padding: 82px 22px 76px;
-      display: grid; grid-template-columns: 1.3fr .7fr; gap: 48px; align-items: center;
-    }
-    .eyebrow { color: #f4d58e; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; font-size: .82rem; }
-    h1 { font-size: clamp(2.2rem, 5vw, 4.1rem); line-height: 1.12; margin: 14px 0 18px; letter-spacing: -.035em; }
-    .hero p { max-width: 660px; color: #e6f4ec; font-size: 1.08rem; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      text-decoration: none; border-radius: 999px; padding: 12px 20px; font-weight: 800;
-      border: 1px solid transparent;
-    }
-    .btn-primary { background: var(--gold); color: #30230b; }
-    .btn-outline { border-color: rgba(255,255,255,.65); color: white; }
-    .hero-card {
-      border: 1px solid rgba(255,255,255,.22); background: rgba(255,255,255,.09);
-      border-radius: 26px; padding: 28px; box-shadow: 0 18px 60px rgba(0,0,0,.12);
-    }
-    .hero-symbol {
-      width: 100px; height: 100px; margin: 0 auto 20px; border-radius: 50%;
-      border: 2px solid #f4d58e; display: grid; place-items: center;
-      font-size: 2.4rem; color: #f4d58e; background: rgba(255,255,255,.07);
-    }
-    .hero-card h2 { text-align: center; font-size: 1.3rem; margin: 0 0 8px; }
-    .hero-card p { text-align: center; font-size: .95rem; margin: 0; }
-    .facts { max-width: 1120px; margin: -26px auto 0; padding: 0 22px; position: relative; }
-    .facts-grid { background: white; border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); display: grid; grid-template-columns: repeat(4, 1fr); overflow: hidden; }
-    .fact { padding: 22px; border-right: 1px solid var(--line); }
-    .fact:last-child { border-right: 0; }
-    .fact strong { display: block; color: var(--green); font-size: 1.02rem; }
-    .fact span { color: var(--muted); font-size: .86rem; }
-    section { padding: 76px 22px; }
-    .container { max-width: 1120px; margin: auto; }
-    .section-kicker { color: #a6761f; font-weight: 800; font-size: .82rem; letter-spacing: .09em; text-transform: uppercase; }
-    h2.section-title { color: var(--green-dark); font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.2; margin: 8px 0 16px; }
-    .section-intro { color: var(--muted); max-width: 780px; margin: 0 0 32px; }
-    .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 36px; align-items: start; }
-    .about-copy p { margin-top: 0; }
-    .info-card { background: var(--green-light); border: 1px solid #d5e9dc; border-radius: 20px; padding: 26px; }
-    .info-card h3 { margin: 0 0 16px; color: var(--green-dark); }
-    .info-row { padding: 12px 0; border-bottom: 1px solid #cfe2d5; display: grid; grid-template-columns: 42% 58%; gap: 12px; }
-    .info-row:last-child { border-bottom: 0; }
-    .info-row span { color: var(--muted); font-size: .9rem; }
-    .info-row strong { overflow-wrap: anywhere; }
-    .objectives { background: #f2f7f2; }
-    .objective-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .objective {
-      background: white; border: 1px solid var(--line); border-radius: 18px; padding: 23px;
-      display: flex; gap: 16px; box-shadow: 0 5px 18px rgba(15,55,42,.035);
-    }
-    .objective-num {
-      flex: 0 0 42px; width: 42px; height: 42px; display: grid; place-items: center;
-      border-radius: 13px; color: white; background: var(--green); font-weight: 900;
-    }
-    .objective h3 { margin: 0 0 7px; color: var(--green-dark); font-size: 1.05rem; }
-    .objective p { margin: 0; color: var(--muted); font-size: .94rem; }
-    .note { border-left: 4px solid var(--gold); background: #fff8e8; padding: 16px 18px; border-radius: 0 12px 12px 0; color: #5d4b27; margin-top: 24px; font-size: .93rem; }
-    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 28px; }
-    .contact-card a:not(.btn) { color: var(--green); font-weight: 800; }
-    .objective-grid { min-width: 0; }
-    .objective { min-width: 0; }
-    .objective p, .objective h3 { overflow-wrap: anywhere; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+    .topline { background: var(--forest-deep); color: #f7fff9; font-size: .83rem; }
+    .topline .wrap { display: flex; justify-content: space-between; gap: 14px; padding: 8px 0; flex-wrap: wrap; }
+    .topline a { text-decoration: none; }
+    .site-header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.96); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(223,233,226,.9); }
+    .nav { min-height: 86px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 12px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
+    .brand img { width: 62px; height: 62px; object-fit: contain; border-radius: 50%; border: 2px solid #ecd28d; background: white; }
+    .brand-title { color: var(--forest-deep); font-size: 1.04rem; font-weight: 850; line-height: 1.25; }
+    .brand-title small { display: block; margin-top: 4px; color: var(--muted); font-size: .82rem; font-weight: 650; }
+    .nav-right { display: flex; align-items: center; justify-content: flex-end; gap: 20px; }
+    .nav-links { display: flex; align-items: center; gap: clamp(12px, 1.8vw, 24px); flex-wrap: wrap; }
+    .nav-links a { text-decoration: none; font-weight: 750; font-size: .91rem; color: #33473e; }
+    .nav-links a:hover { color: var(--forest-mid); }
+    .lang-btn, .menu-btn { border: 1px solid #bfd6c8; color: var(--forest); background: white; border-radius: 999px; padding: 9px 14px; font: inherit; font-size: .85rem; font-weight: 800; cursor: pointer; white-space: nowrap; }
+    .menu-btn { display: none; }
+    .hero { color: white; background:
+      radial-gradient(circle at 82% 20%, rgba(228,184,93,.20), transparent 25%),
+      radial-gradient(circle at 8% 100%, rgba(255,255,255,.07), transparent 28%),
+      linear-gradient(125deg, #08382d, #104d3d 55%, #1c6c50); overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.12fr .88fr; gap: 58px; align-items: center; padding-block: clamp(56px, 8vw, 100px); }
+    .eyebrow { display: inline-flex; gap: 9px; align-items: center; color: #f4d58e; text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; font-weight: 900; }
+    .eyebrow:before { content: ""; width: 28px; height: 2px; background: var(--gold); }
+    h1 { font-size: clamp(2.35rem, 5.2vw, 4.7rem); line-height: 1.12; letter-spacing: -.04em; margin: 17px 0 20px; }
+    h1 span { display: block; margin-top: 10px; font-size: .58em; line-height: 1.35; letter-spacing: 0; color: #e6f3eb; }
+    .hero-copy { color: #e0eee6; max-width: 640px; font-size: clamp(1rem, 1.4vw, 1.13rem); margin: 0; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .btn { display: inline-flex; justify-content: center; align-items: center; gap: 9px; min-height: 48px; padding: 12px 20px; border-radius: 999px; text-decoration: none; font-weight: 850; transition: transform .2s, box-shadow .2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-gold { background: var(--gold); color: #2d281b; box-shadow: 0 8px 22px rgba(0,0,0,.12); }
+    .btn-glass { color: white; border: 1px solid rgba(255,255,255,.38); background: rgba(255,255,255,.07); }
+    .hero-visual { position: relative; max-width: 440px; justify-self: end; width: 100%; }
+    .hero-photo { width: 100%; aspect-ratio: 4 / 4.4; object-fit: cover; border-radius: 48% 48% 26px 26px; border: 5px solid rgba(255,255,255,.78); box-shadow: 0 24px 65px rgba(0,0,0,.22); }
+    .hero-stamp { position: absolute; left: -28px; bottom: 28px; width: 128px; height: 128px; padding: 12px; border-radius: 50%; display: grid; place-content: center; text-align: center; color: var(--forest-deep); background: var(--cream); border: 4px solid #e9c66e; box-shadow: var(--shadow); font-weight: 900; line-height: 1.35; }
+    .hero-stamp span { font-size: .78rem; font-weight: 700; }
+    .quick-facts { position: relative; margin-top: -26px; z-index: 2; }
+    .facts-grid { display: grid; grid-template-columns: repeat(4, 1fr); background: white; border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); overflow: hidden; }
+    .fact { padding: 22px 24px; border-right: 1px solid var(--line); }
+    .fact:last-child { border: 0; }
+    .fact strong { display: block; color: var(--forest); font-size: 1rem; }
+    .fact span { display: block; color: var(--muted); font-size: .82rem; margin-top: 3px; }
+    section { padding: clamp(58px, 7vw, 88px) 0; }
+    .section-head { max-width: 780px; margin-bottom: 32px; }
+    .kicker { color: #9c7223; text-transform: uppercase; letter-spacing: .13em; font-weight: 900; font-size: .78rem; }
+    .section-title { color: var(--forest-deep); font-size: clamp(1.9rem, 3.6vw, 3rem); line-height: 1.2; letter-spacing: -.025em; margin: 9px 0 14px; }
+    .section-desc { color: var(--muted); margin: 0; font-size: 1.02rem; }
+    .about { background: #fbfdfb; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .about-copy p { margin: 0 0 16px; color: #52635a; }
+    .quote { margin-top: 25px; border-left: 4px solid var(--gold); background: var(--cream); padding: 18px 22px; border-radius: 0 14px 14px 0; color: var(--forest-deep); font-weight: 800; }
+    .detail-card { background: white; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; box-shadow: 0 12px 34px rgba(8,56,45,.05); }
+    .detail-card h3 { margin: 0 0 18px; color: var(--forest-deep); font-size: 1.2rem; }
+    .detail-row { display: grid; grid-template-columns: 130px 1fr; gap: 16px; padding: 13px 0; border-bottom: 1px solid #edf1ed; }
+    .detail-row:last-child { border: 0; }
+    .detail-row span { color: var(--muted); font-size: .9rem; }
+    .detail-row strong { color: #263b31; font-size: .94rem; overflow-wrap: anywhere; }
+    .objectives { background: var(--mint); }
+    .objective-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+    .objective-card { background: white; border: 1px solid #dce9df; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 24px rgba(8,56,45,.045); transition: transform .22s, box-shadow .22s; }
+    .objective-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .objective-card img { width: 100%; display: block; aspect-ratio: 2.35 / 1; object-fit: cover; background: #e4eee7; }
+    .objective-body { padding: 20px 21px 23px; }
+    .objective-number { display: inline-grid; place-items: center; width: 37px; height: 37px; border-radius: 12px; background: var(--forest); color: white; font-size: .82rem; font-weight: 900; margin-bottom: 13px; }
+    .objective-card h3 { margin: 0 0 7px; color: var(--forest-deep); font-size: 1.05rem; line-height: 1.45; }
+    .objective-card p { margin: 0; color: var(--muted); font-size: .91rem; }
+    .objective-card p + p { margin-top: 5px; }
+    .gallery { background: white; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 14px; }
+    .gallery-item { position: relative; overflow: hidden; border-radius: 16px; background: #edf3ef; aspect-ratio: 1.2 / 1; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .35s; }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-item figcaption { position: absolute; inset: auto 0 0; padding: 28px 13px 12px; color: white; font-weight: 800; font-size: .88rem; background: linear-gradient(transparent, rgba(4,30,23,.82)); }
+    .illustrative-note { margin-top: 18px; color: var(--muted); font-size: .83rem; background: #f7faf7; border: 1px solid var(--line); border-radius: 12px; padding: 12px 15px; }
+    .support { color: white; background: linear-gradient(120deg, #08382d, #155e4b); }
+    .support-grid { display: grid; grid-template-columns: 1fr .8fr; gap: 40px; align-items: center; }
+    .support .section-title { color: white; }
+    .support .section-desc { color: #dcebe2; }
+    .support-box { background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius); padding: 28px; }
+    .support-box p { color: #e1eee6; margin-top: 0; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
     .contact-card { border: 1px solid var(--line); border-radius: 20px; padding: 26px; background: white; }
-    .contact-card h3 { color: var(--green-dark); margin-top: 0; }
-    .contact-card p { margin: 8px 0; color: var(--muted); }
-    .map-placeholder {
-      min-height: 230px; border-radius: 16px; display: grid; place-items: center; text-align: center;
-      padding: 24px; background: linear-gradient(135deg, #eaf5ef, #fff8e8); color: var(--green-dark);
-      border: 1px dashed #b8d3c2;
-    }
-    footer { background: #0b352c; color: #dcece3; padding: 30px 22px; }
-    .footer-inner { max-width: 1120px; margin: auto; display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
-    footer p { margin: 4px 0; font-size: .9rem; }
+    .contact-card h3 { color: var(--forest-deep); margin: 0 0 14px; }
+    .contact-line { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; }
+    .contact-icon { flex: 0 0 38px; width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; background: var(--mint); color: var(--forest); font-weight: 900; }
+    .contact-line small { display: block; color: var(--muted); }
+    .contact-line a { font-weight: 800; color: var(--forest); text-decoration-thickness: 1px; text-underline-offset: 3px; overflow-wrap: anywhere; }
+    .footer { background: #062d24; color: #dcebe2; padding: 30px 0; font-size: .86rem; }
+    .footer-grid { display: flex; justify-content: space-between; gap: 20px; align-items: center; flex-wrap: wrap; }
+    .footer strong { color: white; }
+    .footer p { margin: 4px 0; }
+    .footer a { color: #f2d58f; }
     .lang-en .hi { display: none !important; }
     .lang-hi .en { display: none !important; }
-    @media (max-width: 850px) {
-      .nav { align-items: flex-start; flex-direction: column; }
-      nav { justify-content: flex-start; gap: 12px; }
-      .hero-inner, .about-grid, .contact-grid { grid-template-columns: 1fr; }
-      .hero-inner { padding-top: 58px; gap: 32px; }
-      .hero-card { max-width: 430px; }
+    .skip-link { position: absolute; left: -999px; top: auto; }
+    .skip-link:focus { left: 12px; top: 12px; z-index: 100; background: white; color: black; padding: 10px; }
+    @media (max-width: 980px) {
+      .nav { align-items: flex-start; }
+      .nav-right { gap: 10px; }
+      .nav-links { gap: 12px; }
+      .nav-links a { font-size: .83rem; }
+      .hero-grid { gap: 30px; }
+      .objective-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
       .facts-grid { grid-template-columns: repeat(2, 1fr); }
       .fact:nth-child(2) { border-right: 0; }
       .fact:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
-      .objective-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .wrap { width: min(var(--max), calc(100% - 30px)); }
+      .topline .wrap { justify-content: center; text-align: center; }
+      .nav { min-height: 74px; align-items: center; gap: 10px; }
+      .brand img { width: 50px; height: 50px; }
+      .brand-title { font-size: .91rem; }
+      .brand-title small { font-size: .75rem; }
+      .menu-btn { display: inline-block; }
+      .nav-right { flex-wrap: wrap; justify-content: flex-end; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; padding: 18px 22px 22px; background: white; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); flex-direction: column; align-items: stretch; gap: 13px; }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: .96rem; }
+      .hero-grid { grid-template-columns: 1fr; padding-block: 52px 65px; }
+      .hero-visual { width: min(80%, 330px); justify-self: center; }
+      .hero-stamp { width: 100px; height: 100px; left: -18px; bottom: 18px; font-size: .86rem; }
+      .about-grid, .support-grid, .contact-grid { grid-template-columns: 1fr; gap: 22px; }
+      .detail-row { grid-template-columns: 105px 1fr; gap: 10px; }
+      .gallery-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      section { padding-block: 58px; }
     }
     @media (max-width: 480px) {
-      .facts-grid { grid-template-columns: 1fr; }
-      .fact { border-right: 0; border-bottom: 1px solid var(--line); }
-      .fact:last-child { border-bottom: 0; }
-      .info-row { grid-template-columns: 1fr; gap: 3px; }
-      nav a { font-size: .85rem; }
+      .objective-grid { grid-template-columns: 1fr; }
+      .facts-grid { grid-template-columns: 1fr 1fr; }
+      .fact { padding: 16px; }
+      .fact strong { font-size: .9rem; }
+      .fact span { font-size: .76rem; }
+      .section-title { font-size: 1.85rem; }
+      .detail-card, .contact-card, .support-box { padding: 21px; }
+      .gallery-grid { gap: 10px; }
+      .gallery-item { aspect-ratio: 1 / 1; }
     }
-
-    .photo-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 24px; }
-    .photo-gallery figure { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: 0 5px 18px rgba(15, 55, 42, .10); }
-    .photo-gallery img { display: block; width: 100%; height: 280px; object-fit: cover; }
-    .photo-gallery figcaption { padding: 14px; text-align: center; font-weight: 700; color: var(--green); }
-    @media (max-width: 480px) { .photo-gallery img { height: 220px; } }
-
-
-    .objective-with-photo { display: block; padding: 0; overflow: hidden; }
-    .objective-with-photo .objective-photo { width: 100%; height: 190px; object-fit: cover; display: block; }
-    .objective-with-photo .objective-content { display: flex; gap: 16px; padding: 20px 23px 23px; }
-    .objective-with-photo .objective-content > div:last-child { min-width: 0; }
-    .objective-with-photo h3 { margin: 0 0 7px; color: var(--green-dark); font-size: 1.05rem; }
-    .objective-with-photo p { margin: 0 0 5px; color: var(--muted); font-size: .94rem; }
-    .objective-with-photo .objective-num { flex: 0 0 42px; width: 42px; height: 42px; }
-    @media (max-width: 480px) { .objective-with-photo .objective-photo { height: 170px; } }
-
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
   </style>
 </head>
-<body class="lang-both">
-  <div class="topbar">
-    <span class="en">Community service • Social welfare • Kathgodam, Uttarakhand</span>
-    <span class="hi">जनसेवा • सामाजिक कल्याण • काठगोदाम, उत्तराखंड</span>
+<body class="lang-en">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="topline">
+    <div class="wrap">
+      <span class="en">Community service · Social welfare · Kathgodam, Uttarakhand</span>
+      <span class="hi">जनसेवा · सामाजिक कल्याण · काठगोदाम, उत्तराखंड</span>
+      <span><a href="tel:9808929000">NGO Service: 9808929000</a></span>
+    </div>
   </div>
-  <header>
-    <div class="nav">
+  <header class="site-header">
+    <div class="wrap nav">
       <a class="brand" href="#home" aria-label="Aradhna Sewa Sanstha home">
-        <img class="brand-logo" src="assets/aradhna-logo.png" alt="Aradhna Sewa Sanstha logo">
-        <div class="brand-name">Aradhna Sewa Sanstha<small>आराधना सेवा संस्था</small></div>
+        <img src="assets/aradhna-logo.jpg" alt="आराधना सेवा संस्था — सेवा ही धर्म है">
+        <span class="brand-title">Aradhna Sewa Sanstha<small>आराधना सेवा संस्था</small></span>
       </a>
-      <nav aria-label="Main navigation">
-        <a href="#home"><span class="en">Home</span><span class="hi">होम</span></a>
-        <a href="#about"><span class="en">About</span><span class="hi">परिचय</span></a>
-        <a href="#objectives"><span class="en">Objectives</span><span class="hi">उद्देश्य</span></a>
-        <a href="#gallery"><span class="en">Gallery</span><span class="hi">गैलरी</span></a>
-        <a href="#donate"><span class="en">Donate</span><span class="hi">दान</span></a>
-        <a href="#contact"><span class="en">Contact</span><span class="hi">संपर्क</span></a>
-        <button class="lang-button" id="languageToggle" type="button" aria-label="Switch language">हिंदी / English</button>
-      </nav>
+      <div class="nav-right">
+        <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+          <a href="#home"><span class="en">Home</span><span class="hi">होम</span></a>
+          <a href="#about"><span class="en">About</span><span class="hi">परिचय</span></a>
+          <a href="#objectives"><span class="en">Objectives</span><span class="hi">उद्देश्य</span></a>
+          <a href="#gallery"><span class="en">Gallery</span><span class="hi">गैलरी</span></a>
+          <a href="#donate"><span class="en">Support</span><span class="hi">सहयोग</span></a>
+          <a href="#contact"><span class="en">Contact</span><span class="hi">संपर्क</span></a>
+        </nav>
+        <button class="lang-btn" id="langToggle" type="button" aria-label="Switch website language">हिंदी</button>
+        <button class="menu-btn" id="menuToggle" type="button" aria-expanded="false" aria-controls="navLinks">☰</button>
+      </div>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero" id="home">
-      <div class="hero-inner">
+      <div class="wrap hero-grid">
         <div>
-          <div class="eyebrow"><span class="en">Non-government social welfare organisation</span><span class="hi">गैर-सरकारी सामाजिक कल्याण संस्था</span></div>
-          <h1><span class="en">Aradhna Sewa Sanstha</span><span class="hi">आराधना सेवा संस्था</span></h1>
-          <p class="en">Working towards community welfare through charitable objectives that include environmental awareness, women’s skill development, education, art and public awareness.</p>
-          <p class="hi">पर्यावरण जागरूकता, महिला कौशल विकास, शिक्षा, कला और जन-जागरूकता सहित धर्मार्थ उद्देश्यों के माध्यम से समाज कल्याण की दिशा में कार्यरत।</p>
+          <div class="eyebrow"><span class="en">A commitment to service</span><span class="hi">सेवा का संकल्प</span></div>
+          <h1><span class="en">Service with compassion.<br>Progress with purpose.</span><span class="hi">सेवा, संवेदना और समर्पण।<br>समाज के विकास का संकल्प।</span><span>Aradhna Sewa Sanstha · आराधना सेवा संस्था</span></h1>
+          <p class="hero-copy en">A social welfare organisation with charitable objectives focused on environmental awareness, women’s skills, education, art and community wellbeing.</p>
+          <p class="hero-copy hi">एक सामाजिक कल्याण संस्था, जिसके धर्मार्थ उद्देश्यों में पर्यावरण जागरूकता, महिला कौशल विकास, शिक्षा, कला और सामुदायिक कल्याण शामिल हैं।</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#objectives"><span class="en">Explore our objectives</span><span class="hi">हमारे उद्देश्य जानें</span> →</a>
-            <a class="btn btn-outline" href="#about"><span class="en">About the organisation</span><span class="hi">संस्था का परिचय</span></a>
+            <a class="btn btn-gold" href="#objectives"><span class="en">Explore our objectives</span><span class="hi">हमारे उद्देश्य देखें</span> <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-glass" href="#contact"><span class="en">Contact the Sanstha</span><span class="hi">संस्था से संपर्क करें</span></a>
           </div>
         </div>
-        <div class="hero-card">
-          <div class="hero-symbol" aria-hidden="true">सेवा</div>
-          <h2><span class="en">Service with purpose</span><span class="hi">उद्देश्यपूर्ण सेवा</span></h2>
-          <p class="en">A community-focused organisation with stated charitable and social welfare objectives.</p>
-          <p class="hi">धर्मार्थ एवं सामाजिक कल्याण के घोषित उद्देश्यों वाली जन-केंद्रित संस्था।</p>
+        <div class="hero-visual">
+          <img class="hero-photo" src="gallery/community-welfare.jpg" alt="Illustrative image representing community support" fetchpriority="high">
+          <div class="hero-stamp">सेवा ही धर्म है<span>Service is our purpose</span></div>
         </div>
       </div>
     </section>
 
-    <div class="facts" aria-label="Organisation highlights">
+    <div class="wrap quick-facts" aria-label="Organisation overview">
       <div class="facts-grid">
-        <div class="fact"><strong>15 June 2014</strong><span class="en">Date shown on the document</span><span class="hi">दस्तावेज़ में दी गई तिथि</span></div>
-        <div class="fact"><strong>630SHA</strong><span class="en">Registration ID as shown</span><span class="hi">दस्तावेज़ में दिया गया पंजीकरण ID</span></div>
+        <div class="fact"><strong>15 June 2014</strong><span class="en">Registration date shown in document</span><span class="hi">दस्तावेज़ में दर्शाई गई पंजीकरण तिथि</span></div>
         <div class="fact"><strong>Kathgodam</strong><span class="en">Nainital, Uttarakhand</span><span class="hi">नैनीताल, उत्तराखंड</span></div>
-        <div class="fact"><strong><span class="en">Social Welfare</span><span class="hi">सामाजिक कल्याण</span></strong><span class="en">Field of work shown on document</span><span class="hi">दस्तावेज़ में दिया गया कार्य क्षेत्र</span></div>
+        <div class="fact"><strong>Social Welfare</strong><span class="en">Organisation type shown in document</span><span class="hi">दस्तावेज़ में दर्शाया गया प्रकार</span></div>
+        <div class="fact"><strong>7 objectives</strong><span class="en">Charitable objectives from the document</span><span class="hi">दस्तावेज़ में दिए गए धर्मार्थ उद्देश्य</span></div>
       </div>
     </div>
 
-    <section id="about">
-      <div class="container">
-        <div class="section-kicker"><span class="en">Who we are</span><span class="hi">हम कौन हैं</span></div>
-        <h2 class="section-title"><span class="en">About the organisation</span><span class="hi">संस्था का परिचय</span></h2>
+    <section class="about" id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker"><span class="en">Who we are</span><span class="hi">हमारा परिचय</span></div>
+          <h2 class="section-title"><span class="en">About Aradhna Sewa Sanstha</span><span class="hi">आराधना सेवा संस्था के बारे में</span></h2>
+          <p class="section-desc en">The organisation’s stated objectives, as reflected in the supplied registration document, centre on charitable and social welfare activities.</p>
+          <p class="section-desc hi">उपलब्ध कराए गए पंजीकरण दस्तावेज़ के अनुसार, संस्था के घोषित उद्देश्य धर्मार्थ और सामाजिक कल्याण से जुड़े कार्यों पर केंद्रित हैं।</p>
+        </div>
         <div class="about-grid">
           <div class="about-copy">
-            <p class="en">Aradhna Sewa Sanstha is identified in the provided document as a non-government organisation working in the field of social welfare. Its stated charitable objectives include environmental problem-solving, encouraging women’s cottage industries and skills, supporting education for children who lack access to education, promoting art and cultural awareness, and spreading awareness of sanitation, literacy, child nutrition and welfare schemes.</p>
-            <p class="hi">उपलब्ध दस्तावेज़ में आराधना सेवा संस्था को सामाजिक कल्याण के क्षेत्र में कार्यरत गैर-सरकारी संस्था के रूप में दर्शाया गया है। इसके घोषित धर्मार्थ उद्देश्यों में पर्यावरण संबंधी समस्याओं के समाधान, महिलाओं को कुटीर उद्योग और कौशल के लिए प्रोत्साहित करना, शिक्षा से वंचित बच्चों की सहायता, कला एवं सांस्कृतिक जागरूकता को बढ़ावा देना तथा स्वच्छता, साक्षरता, शिशु पोषण और कल्याणकारी योजनाओं के प्रति जागरूकता फैलाना शामिल है।</p>
-            <p class="en">The details on this website are based on the document supplied for preparing the site. Please contact the organisation directly for confirmation or updates to official records.</p>
-            <p class="hi">इस वेबसाइट पर दी गई जानकारी उपलब्ध कराए गए दस्तावेज़ पर आधारित है। आधिकारिक अभिलेखों की पुष्टि या अद्यतन जानकारी के लिए संस्था से संपर्क करें।</p>
+            <p class="en">Aradhna Sewa Sanstha is listed in the supplied document as a non-government social welfare organisation based in Kathgodam, District Nainital, Uttarakhand. Its stated objectives include environmental concerns, women’s livelihood and training, free educational support, cultural awareness, and community welfare.</p>
+            <p class="hi">उपलब्ध दस्तावेज़ में आराधना सेवा संस्था को काठगोदाम, जिला नैनीताल, उत्तराखंड स्थित गैर-सरकारी सामाजिक कल्याण संस्था के रूप में दर्शाया गया है। इसके घोषित उद्देश्यों में पर्यावरण संरक्षण, महिला आजीविका एवं प्रशिक्षण, निःशुल्क शिक्षा सहायता, सांस्कृतिक जागरूकता और सामुदायिक कल्याण शामिल हैं।</p>
+            <div class="quote"><span class="en">“सेवा ही धर्म है” — Service is our guiding principle.</span><span class="hi">“सेवा ही धर्म है” — यही हमारा प्रेरक संदेश है।</span></div>
           </div>
-          <aside class="info-card">
+          <div class="detail-card">
             <h3><span class="en">Organisation details</span><span class="hi">संस्था का विवरण</span></h3>
-            <div class="info-row"><span class="en">Name</span><span class="hi">नाम</span><strong>Aradhna Sewa Sanstha<br>आराधना सेवा संस्था</strong></div>
-            <div class="info-row"><span class="en">Registration ID</span><span class="hi">पंजीकरण ID</span><strong>630SHA</strong></div>
-            <div class="info-row"><span class="en">Date shown</span><span class="hi">दस्तावेज़ में दी गई तिथि</span><strong>15 June 2014</strong></div>
-            <div class="info-row"><span class="en">Organisation type</span><span class="hi">संस्था का प्रकार</span><strong><span class="en">Non-government</span><span class="hi">गैर-सरकारी</span></strong></div>
-            <div class="info-row"><span class="en">Field</span><span class="hi">कार्य क्षेत्र</span><strong><span class="en">Social Welfare</span><span class="hi">सामाजिक कल्याण</span></strong></div>
-            <div class="info-row"><span class="en">Area</span><span class="hi">क्षेत्र</span><strong><span class="en">National (as shown on document)</span><span class="hi">राष्ट्रीय (दस्तावेज़ के अनुसार)</span></strong></div>
-            <div class="info-row"><span class="en">Address</span><span class="hi">पता</span><strong>Quarters No. 56/A, Railway Colony, Kathgodam, District Nainital, Uttarakhand, India</strong></div>
-          </aside>
+            <div class="detail-row"><span class="en">Name</span><span class="hi">नाम</span><strong>Aradhna Sewa Sanstha<br>आराधना सेवा संस्था</strong></div>
+            <div class="detail-row"><span class="en">Address</span><span class="hi">पता</span><strong>Quarters No. 56/A, Railway Colony, Kathgodam, District Nainital, Uttarakhand, India</strong></div>
+            <div class="detail-row"><span class="en">Registration date</span><span class="hi">पंजीकरण तिथि</span><strong>15 June 2014</strong></div>
+            <div class="detail-row"><span class="en">Nature</span><span class="hi">प्रकृति</span><strong>Non-Government / गैर-सरकारी</strong></div>
+            <div class="detail-row"><span class="en">Type</span><span class="hi">प्रकार</span><strong>Social Welfare / सामाजिक कल्याण</strong></div>
+            <div class="detail-row"><span class="en">Area shown</span><span class="hi">दर्शाया गया क्षेत्र</span><strong>National / राष्ट्रीय</strong></div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="objectives" id="objectives">
-      <div class="container">
-        <div class="section-kicker"><span class="en">Our charitable aims</span><span class="hi">हमारे धर्मार्थ उद्देश्य</span></div>
-        <h2 class="section-title"><span class="en">Our objectives</span><span class="hi">संस्था के उद्देश्य</span></h2>
-        <p class="section-intro en">The following objectives are summarised from the supplied document. They describe the organisation’s stated aims, not a claim that every activity is currently underway.</p>
-        <p class="section-intro hi">निम्नलिखित उद्देश्य उपलब्ध दस्तावेज़ के आधार पर प्रस्तुत किए गए हैं। ये संस्था के घोषित उद्देश्य हैं; इससे यह दावा नहीं किया जा रहा कि सभी गतिविधियाँ वर्तमान में संचालित हो रही हैं।</p>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker"><span class="en">What we stand for</span><span class="hi">हमारे कार्यक्षेत्र</span></div>
+          <h2 class="section-title"><span class="en">Our charitable objectives</span><span class="hi">हमारे धर्मार्थ उद्देश्य</span></h2>
+          <p class="section-desc en">Seven objectives adapted from the supplied registration document. Images are illustrative visuals, not claims of specific completed activities.</p>
+          <p class="section-desc hi">उपलब्ध पंजीकरण दस्तावेज़ के सात उद्देश्य। साथ दी गई तस्वीरें उदाहरणात्मक दृश्य हैं, किसी विशेष कार्यक्रम के वास्तविक आयोजन का दावा नहीं।</p>
+        </div>
         <div class="objective-grid">
-          <article class="objective objective-with-photo">
-            <img class="objective-photo" src="gallery/environment.jpg" alt="environment activity" loading="lazy">
-            <div class="objective-content">
-              <div class="objective-num">01</div>
-              <div><h3 class="en">Environmental concerns</h3><h3 class="hi">पर्यावरण संरक्षण</h3>
-              <p class="en">Work towards addressing environmental problems.</p><p class="hi">पर्यावरण की समस्याओं के निराकरण हेतु कार्य करना।</p></div>
-            </div>
+          <article class="objective-card">
+            <img src="gallery/environment.jpg" alt="Illustrative environmental care image" loading="lazy">
+            <div class="objective-body"><span class="objective-number">01</span><h3 class="en">Environmental concerns</h3><h3 class="hi">पर्यावरण संरक्षण</h3><p class="en">Work towards addressing environmental problems.</p><p class="hi">पर्यावरण की समस्याओं के निराकरण हेतु कार्य करना।</p></div>
           </article>
-          <article class="objective objective-with-photo">
-            <img class="objective-photo" src="gallery/livelihood.jpg" alt="livelihood activity" loading="lazy">
-            <div class="objective-content">
-              <div class="objective-num">02</div>
-              <div><h3 class="en">Women and cottage industries</h3><h3 class="hi">महिला एवं कुटीर उद्योग</h3>
-              <p class="en">Encourage women to adopt cottage industries.</p><p class="hi">महिलाओं को कुटीर उद्योग अपनाने के लिए प्रोत्साहित करना।</p></div>
-            </div>
+          <article class="objective-card">
+            <img src="gallery/livelihood.jpg" alt="Illustrative women cottage industry image" loading="lazy">
+            <div class="objective-body"><span class="objective-number">02</span><h3 class="en">Women and cottage industries</h3><h3 class="hi">महिला एवं कुटीर उद्योग</h3><p class="en">Encourage women to adopt cottage industries.</p><p class="hi">महिलाओं को कुटीर उद्योग अपनाने हेतु प्रोत्साहित करना।</p></div>
           </article>
-          <article class="objective objective-with-photo">
-            <img class="objective-photo" src="gallery/education.jpg" alt="education activity" loading="lazy">
-            <div class="objective-content">
-              <div class="objective-num">03</div>
-              <div><h3 class="en">Sewing and embroidery skills</h3><h3 class="hi">सिलाई-कढ़ाई प्रशिक्षण</h3>
-              <p class="en">Make efforts to provide women with sewing and embroidery training to support self-employment.</p><p class="hi">महिलाओं को स्वरोजगार के लिए सिलाई-कढ़ाई का प्रशिक्षण देने का प्रयास करना।</p></div>
-            </div>
+          <article class="objective-card">
+            <img src="gallery/sewing-training.jpg" alt="Illustrative sewing and embroidery training image" loading="lazy">
+            <div class="objective-body"><span class="objective-number">03</span><h3 class="en">Sewing and embroidery skills</h3><h3 class="hi">सिलाई-कढ़ाई प्रशिक्षण</h3><p class="en">Make efforts to provide sewing and embroidery training to women to support self-employment.</p><p class="hi">महिलाओं के स्वरोजगार को बढ़ावा देने के लिए सिलाई-कढ़ाई प्रशिक्षण का प्रयास करना।</p></div>
           </article>
-          <article class="objective objective-with-photo">
-            <img class="objective-photo" src="gallery/health-nutrition.jpg" alt="health and nutrition activity" loading="lazy">
-            <div class="objective-content">
-              <div class="objective-num">04</div>
-              <div><h3 class="en">Food preparation skills</h3><h3 class="hi">खाद्य सामग्री बनाने का प्रशिक्षण</h3>
-              <p class="en">Provide training for economically disadvantaged women in making pickles, preserves (murabba) and savoury snacks (namkeen).</p><p class="hi">आर्थिक रूप से कमजोर महिलाओं को अचार, मुरब्बा और नमकीन बनाने का प्रशिक्षण देना।</p></div>
-            </div>
+          <article class="objective-card">
+            <img src="gallery/health-nutrition.jpg" alt="Illustrative food and nutrition image" loading="lazy">
+            <div class="objective-body"><span class="objective-number">04</span><h3 class="en">Food preparation skills</h3><h3 class="hi">खाद्य सामग्री बनाने का प्रशिक्षण</h3><p class="en">Train economically disadvantaged women in preparing pickles, preserves (murabba) and savoury snacks (namkeen).</p><p class="hi">आर्थिक रूप से कमजोर महिलाओं को अचार, मुरब्बा और नमकीन बनाने का प्रशिक्षण देना।</p></div>
           </article>
-          <article class="objective objective-with-photo">
-            <img class="objective-photo" src="gallery/education.jpg" alt="education activity" loading="lazy">
-            <div class="objective-content">
-              <div class="objective-num">05</div>
-              <div><h3 class="en">Education support</h3><h3 class="hi">निःशुल्क शिक्षा शिविर</h3>
-              <p class="en">Arrange free educational camps for children who lack access to education.</p><p class="hi">अशिक्षित बच्चों के लिए निःशुल्क शिक्षा शिविर की व्यवस्था करना।</p></div>
-            </div>
+          <article class="objective-card">
+            <img src="gallery/education.jpg" alt="Illustrative education support image" loading="lazy">
+            <div class="objective-body"><span class="objective-number">05</span><h3 class="en">Education support</h3><h3 class="hi">निःशुल्क शिक्षा शिविर</h3><p class="en">Arrange free educational camps for children who lack access to education.</p><p class="hi">अशिक्षित बच्चों के लिए निःशुल्क शिक्षा शिविर की व्यवस्था करना।</p></div>
           </article>
-          <article class="objective objective-with-photo">
-            <img class="objective-photo" src="gallery/art-culture.jpg" alt="art and culture activity" loading="lazy">
-            <div class="objective-content">
-              <div class="objective-num">06</div>
-              <div><h3 class="en">Art and cultural awareness</h3><h3 class="hi">कला एवं सांस्कृतिक जागरूकता</h3>
-              <p class="en">Organise art exhibitions, lectures, fairs, art discussions, workshops and art camps at different places from time to time.</p><p class="hi">समय-समय पर विभिन्न स्थानों पर कला प्रदर्शनियाँ, व्याख्यान, मेले, कला संगोष्ठियाँ, कार्यशालाएँ और कला शिविर आयोजित करना।</p></div>
-            </div>
+          <article class="objective-card">
+            <img src="gallery/art-culture.jpg" alt="Illustrative art and cultural awareness image" loading="lazy">
+            <div class="objective-body"><span class="objective-number">06</span><h3 class="en">Art and cultural awareness</h3><h3 class="hi">कला एवं सांस्कृतिक जागरूकता</h3><p class="en">Organise art exhibitions, lectures, fairs, discussions, workshops and art camps from time to time.</p><p class="hi">समय-समय पर कला प्रदर्शनियाँ, व्याख्यान, मेले, संगोष्ठियाँ, कार्यशालाएँ और कला शिविर आयोजित करना।</p></div>
           </article>
-          <article class="objective objective-with-photo">
-            <img class="objective-photo" src="gallery/welfare.jpg" alt="welfare activity" loading="lazy">
-            <div class="objective-content">
-              <div class="objective-num">07</div>
-              <div><h3 class="en">Community awareness and welfare</h3><h3 class="hi">जन-जागरूकता एवं कल्याण</h3>
-              <p class="en">Promote awareness in underserved urban and rural areas about cleanliness, literacy, family planning, child nutrition and government welfare schemes.</p><p class="hi">शहरी एवं ग्रामीण क्षेत्रों के पिछड़े इलाकों और मलिन बस्तियों में स्वच्छता, साक्षरता, परिवार नियोजन, शिशु पोषण तथा सरकारी कल्याणकारी योजनाओं के प्रति जागरूकता फैलाना।</p></div>
-            </div>
+          <article class="objective-card">
+            <img src="gallery/community-welfare.jpg" alt="Illustrative community welfare image" loading="lazy">
+            <div class="objective-body"><span class="objective-number">07</span><h3 class="en">Community awareness and welfare</h3><h3 class="hi">जन-जागरूकता एवं कल्याण</h3><p class="en">Raise awareness in underserved urban and rural areas about cleanliness, literacy, family planning, child nutrition and government welfare schemes.</p><p class="hi">शहरी एवं ग्रामीण क्षेत्रों के पिछड़े इलाकों और मलिन बस्तियों में स्वच्छता, साक्षरता, परिवार नियोजन, शिशु पोषण तथा सरकारी कल्याणकारी योजनाओं के प्रति जागरूकता फैलाना।</p></div>
           </article>
-        </div>
-        <div class="note">
-          <strong class="en">Note from the supplied document:</strong><strong class="hi"> उपलब्ध दस्तावेज़ के अनुसार:</strong>
-          <span class="en"> The organisation’s stated objectives are charitable and non-profit in nature, and the document says it will not conduct union, trade-union or political activities. This wording is presented as a summary of the document, not independent legal verification.</span>
-          <span class="hi"> संस्था के घोषित उद्देश्य धर्मार्थ एवं गैर-लाभकारी प्रकृति के हैं। दस्तावेज़ में यूनियन, ट्रेड यूनियन या राजनीतिक गतिविधियाँ संचालित न करने का उल्लेख है। यह दस्तावेज़ का सार है, स्वतंत्र कानूनी सत्यापन नहीं।</span>
         </div>
       </div>
     </section>
 
-
-    <section class="objectives" id="gallery">
-      <div class="container">
-        <div class="section-kicker"><span class="en">Moments of service</span><span class="hi">सेवा के पल</span></div>
-        <h2 class="section-title"><span class="en">Photo gallery</span><span class="hi">फोटो गैलरी</span></h2>
-        <p class="section-intro en">Photos from Aradhna Sewa Sanstha's service activities.</p>
-        <p class="section-intro hi">आराधना सेवा संस्था की सेवा गतिविधियों की तस्वीरें।</p>
-        <div class="photo-gallery">
-          <figure>
-            <img src="gallery/sewa-camp-1.jpg.jpeg" alt="Aradhna Sewa Sanstha service camp, photo 1" loading="lazy">
-            <figcaption><span class="en">Sewa Camp 1</span><span class="hi">सेवा शिविर 1</span></figcaption>
-          </figure>
-          <figure>
-            <img src="gallery/sewa-camp-2.jpg.jpeg" alt="Aradhna Sewa Sanstha service camp, photo 2" loading="lazy">
-            <figcaption><span class="en">Sewa Camp 2</span><span class="hi">सेवा शिविर 2</span></figcaption>
-          </figure>
+    <section class="gallery" id="gallery">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker"><span class="en">A visual overview</span><span class="hi">चित्रों में कार्यक्षेत्र</span></div>
+          <h2 class="section-title"><span class="en">Focus areas in pictures</span><span class="hi">चित्रों में हमारे कार्यक्षेत्र</span></h2>
+          <p class="section-desc en">A visual overview of the seven charitable focus areas.</p>
+          <p class="section-desc hi">संस्था के सात धर्मार्थ कार्यक्षेत्रों का चित्रात्मक परिचय।</p>
         </div>
-        <div class="note"><span class="en">More photos can be added to the gallery folder in the GitHub repository and then listed here.</span><span class="hi">और तस्वीरें GitHub repository के gallery folder में upload करके यहाँ जोड़ी जा सकती हैं।</span></div>
+        <div class="gallery-grid">
+          <figure class="gallery-item"><img src="gallery/environment.jpg" alt="Environmental care illustration" loading="lazy"><figcaption><span class="en">Environment</span><span class="hi">पर्यावरण</span></figcaption></figure>
+          <figure class="gallery-item"><img src="gallery/livelihood.jpg" alt="Women and cottage industries illustration" loading="lazy"><figcaption><span class="en">Women’s livelihoods</span><span class="hi">महिला आजीविका</span></figcaption></figure>
+          <figure class="gallery-item"><img src="gallery/sewing-training.jpg" alt="Sewing skills illustration" loading="lazy"><figcaption><span class="en">Skills training</span><span class="hi">कौशल प्रशिक्षण</span></figcaption></figure>
+          <figure class="gallery-item"><img src="gallery/health-nutrition.jpg" alt="Food and nutrition illustration" loading="lazy"><figcaption><span class="en">Food & nutrition</span><span class="hi">खाद्य एवं पोषण</span></figcaption></figure>
+          <figure class="gallery-item"><img src="gallery/education.jpg" alt="Education support illustration" loading="lazy"><figcaption><span class="en">Education</span><span class="hi">शिक्षा</span></figcaption></figure>
+          <figure class="gallery-item"><img src="gallery/art-culture.jpg" alt="Arts and culture illustration" loading="lazy"><figcaption><span class="en">Art & culture</span><span class="hi">कला एवं संस्कृति</span></figcaption></figure>
+          <figure class="gallery-item"><img src="gallery/community-welfare.jpg" alt="Community welfare illustration" loading="lazy"><figcaption><span class="en">Community welfare</span><span class="hi">सामुदायिक कल्याण</span></figcaption></figure>
+        </div>
+        <p class="illustrative-note"><span class="en">Note: These are illustrative images prepared to represent the organisation’s stated objectives. Replace them with authorised photographs of actual Sanstha activities when available.</span><span class="hi">नोट: ये तस्वीरें संस्था के घोषित उद्देश्यों को दर्शाने के लिए उदाहरण के रूप में तैयार की गई हैं। वास्तविक संस्था गतिविधियों की अधिकृत तस्वीरें उपलब्ध होने पर इन्हें उनसे बदलें।</span></p>
       </div>
     </section>
 
-    <section id="donate">
-      <div class="container">
-        <div class="section-kicker"><span class="en">Support the mission</span><span class="hi">उद्देश्य में सहयोग दें</span></div>
-        <h2 class="section-title"><span class="en">Donation and support</span><span class="hi">दान एवं सहयोग</span></h2>
-        <div class="contact-card">
-          <p class="en">If you would like to support Aradhna Sewa Sanstha, please contact the organisation using the official numbers below to confirm its authorised donation process before sending money.</p>
-          <p class="hi">यदि आप आराधना सेवा संस्था को सहयोग देना चाहते हैं, तो राशि भेजने से पहले नीचे दिए गए आधिकारिक नंबरों पर संपर्क करके संस्था की अधिकृत दान प्रक्रिया की पुष्टि करें।</p>
-          <p class="en"><strong>No bank account, UPI ID or payment QR has been published here</strong> because verified donation details were not provided.</p>
-          <p class="hi"><strong>यहाँ बैंक खाता, UPI ID या payment QR प्रकाशित नहीं किया गया है</strong>, क्योंकि सत्यापित दान विवरण उपलब्ध नहीं कराए गए हैं।</p>
-          <a class="btn btn-primary" href="tel:9808929000"><span class="en">Call NGO service number</span><span class="hi">NGO सेवा नंबर पर कॉल करें</span></a>
+    <section class="support" id="donate">
+      <div class="wrap support-grid">
+        <div>
+          <div class="kicker" style="color:#f4d58e"><span class="en">Be part of positive change</span><span class="hi">सकारात्मक बदलाव में सहभागी बनें</span></div>
+          <h2 class="section-title"><span class="en">Support the mission</span><span class="hi">संस्था के उद्देश्य में सहयोग दें</span></h2>
+          <p class="section-desc en">For information about supporting the Sanstha, please contact the organisation and confirm its authorised donation process before transferring any money.</p>
+          <p class="section-desc hi">संस्था को सहयोग देने के लिए संपर्क करें और राशि भेजने से पहले अधिकृत दान प्रक्रिया की पुष्टि अवश्य करें।</p>
+        </div>
+        <div class="support-box">
+          <p class="en"><strong>No bank account, UPI ID or payment QR is listed here</strong> because verified payment details have not been provided.</p>
+          <p class="hi"><strong>यहाँ बैंक खाता, UPI ID या भुगतान QR नहीं दिया गया है</strong>, क्योंकि सत्यापित भुगतान विवरण उपलब्ध नहीं कराए गए हैं।</p>
+          <a class="btn btn-gold" href="tel:9808929000"><span class="en">Call NGO service number</span><span class="hi">NGO सेवा नंबर पर कॉल करें</span> ↗</a>
         </div>
       </div>
     </section>
 
     <section id="contact">
-      <div class="container">
-        <div class="section-kicker"><span class="en">Find us</span><span class="hi">हमसे जुड़ें</span></div>
-        <h2 class="section-title"><span class="en">Contact and location</span><span class="hi">संपर्क एवं स्थान</span></h2>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker"><span class="en">We’re here to connect</span><span class="hi">हमसे संपर्क करें</span></div>
+          <h2 class="section-title"><span class="en">Contact Aradhna Sewa Sanstha</span><span class="hi">आराधना सेवा संस्था से संपर्क करें</span></h2>
+          <p class="section-desc en">For enquiries about the organisation and its stated objectives, use the contact details below.</p>
+          <p class="section-desc hi">संस्था और उसके घोषित उद्देश्यों से संबंधित जानकारी के लिए नीचे दिए गए संपर्क विवरण का उपयोग करें।</p>
+        </div>
         <div class="contact-grid">
           <div class="contact-card">
-            <h3><span class="en">Organisation address</span><span class="hi">संस्था का पता</span></h3>
-            <p><strong>Aradhna Sewa Sanstha</strong></p>
-            <p>Quarters No. 56/A, Railway Colony,<br>Kathgodam, District Nainital,<br>Uttarakhand, India</p>
-            <p><strong>NGO Service Number:</strong> <a href="tel:9808929000">9808929000</a></p>
-            <p><strong>Sachiv / Secretary, Mr. Raj Gourh:</strong> <a href="tel:8755642002">8755642002</a></p>
-            <p><strong>Email / ईमेल:</strong> <a href="mailto:aradhnasewasanstha@gmail.com">aradhnasewasanstha@gmail.com</a></p>
+            <h3><span class="en">Contact numbers</span><span class="hi">संपर्क नंबर</span></h3>
+            <div class="contact-line"><div class="contact-icon" aria-hidden="true">☎</div><div><small>NGO Service Number</small><a href="tel:9808929000">9808929000</a></div></div>
+            <div class="contact-line"><div class="contact-icon" aria-hidden="true">☎</div><div><small>Sachiv / Secretary — Mr. Raj Gourh</small><a href="tel:8755642002">8755642002</a></div></div>
+            <div class="contact-line"><div class="contact-icon" aria-hidden="true">@</div><div><small>Email / ईमेल</small><a href="mailto:aradhnasewasanstha@gmail.com">aradhnasewasanstha@gmail.com</a></div></div>
           </div>
-          <div class="map-placeholder">
-            <div>
-              <div style="font-size:2rem;margin-bottom:8px" aria-hidden="true">⌖</div>
-              <strong class="en">Kathgodam, Nainital, Uttarakhand</strong>
-              <strong class="hi">काठगोदाम, नैनीताल, उत्तराखंड</strong>
-              <p class="en">A map link can be added after confirming the exact public location.</p>
-              <p class="hi">सटीक सार्वजनिक स्थान की पुष्टि के बाद मानचित्र लिंक जोड़ा जा सकता है।</p>
-            </div>
+          <div class="contact-card">
+            <h3><span class="en">Postal address</span><span class="hi">डाक का पता</span></h3>
+            <div class="contact-line"><div class="contact-icon" aria-hidden="true">⌖</div><div><strong>Aradhna Sewa Sanstha</strong><p>Quarters No. 56/A, Railway Colony,<br>Kathgodam, District Nainital,<br>Uttarakhand, India</p></div></div>
+            <p class="illustrative-note" style="margin-bottom:0"><span class="en">Address transcribed from the supplied document.</span><span class="hi">पता उपलब्ध कराए गए दस्तावेज़ के अनुसार लिखा गया है।</span></p>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <strong>Aradhna Sewa Sanstha | आराधना सेवा संस्था</strong>
-        <p class="en">Social welfare • Kathgodam, Uttarakhand</p>
-        <p class="hi">सामाजिक कल्याण • काठगोदाम, उत्तराखंड</p>
-      </div>
-      <p>© <span id="year"></span> Aradhna Sewa Sanstha. <span class="en">Information based on the document provided.</span><span class="hi">जानकारी उपलब्ध कराए गए दस्तावेज़ पर आधारित है।</span></p>
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div><strong>Aradhna Sewa Sanstha · आराधना सेवा संस्था</strong><p>“सेवा ही धर्म है”</p></div>
+      <div><p><span class="en">Information based on the supplied registration document.</span><span class="hi">जानकारी उपलब्ध कराए गए पंजीकरण दस्तावेज़ पर आधारित है।</span></p><p>© <span id="year">2026</span> Aradhna Sewa Sanstha</p></div>
     </div>
   </footer>
 
   <script>
     const body = document.body;
-    const toggle = document.getElementById('languageToggle');
-    let mode = 'both';
-    toggle.addEventListener('click', () => {
-      if (mode === 'both') mode = 'hi';
-      else if (mode === 'hi') mode = 'en';
-      else mode = 'both';
-      body.classList.remove('lang-both', 'lang-hi', 'lang-en');
-      body.classList.add('lang-' + mode);
-      toggle.textContent = mode === 'both' ? 'हिंदी / English' : (mode === 'hi' ? 'केवल हिंदी' : 'English only');
+    const langToggle = document.getElementById('langToggle');
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    langToggle.addEventListener('click', () => {
+      const isEnglish = body.classList.contains('lang-en');
+      body.classList.toggle('lang-en', !isEnglish);
+      body.classList.toggle('lang-hi', isEnglish);
+      document.documentElement.lang = isEnglish ? 'hi' : 'en';
+      langToggle.textContent = isEnglish ? 'English' : 'हिंदी';
+      langToggle.setAttribute('aria-label', isEnglish ? 'Switch to English' : 'हिंदी में बदलें');
     });
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.textContent = isOpen ? '✕' : '☰';
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.textContent = '☰';
+      });
+    });
+
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
