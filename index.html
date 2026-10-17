@@ -178,6 +178,16 @@
     .photo-gallery figcaption { padding: 14px; text-align: center; font-weight: 700; color: var(--green); }
     @media (max-width: 480px) { .photo-gallery img { height: 220px; } }
 
+
+    .objective-with-photo { display: block; padding: 0; overflow: hidden; }
+    .objective-with-photo .objective-photo { width: 100%; height: 190px; object-fit: cover; display: block; }
+    .objective-with-photo .objective-content { display: flex; gap: 16px; padding: 20px 23px 23px; }
+    .objective-with-photo .objective-content > div:last-child { min-width: 0; }
+    .objective-with-photo h3 { margin: 0 0 7px; color: var(--green-dark); font-size: 1.05rem; }
+    .objective-with-photo p { margin: 0 0 5px; color: var(--muted); font-size: .94rem; }
+    .objective-with-photo .objective-num { flex: 0 0 42px; width: 42px; height: 42px; }
+    @media (max-width: 480px) { .objective-with-photo .objective-photo { height: 170px; } }
+
   </style>
 </head>
 <body class="lang-both">
@@ -266,33 +276,61 @@
         <p class="section-intro en">The following objectives are summarised from the supplied document. They describe the organisation’s stated aims, not a claim that every activity is currently underway.</p>
         <p class="section-intro hi">निम्नलिखित उद्देश्य उपलब्ध दस्तावेज़ के आधार पर प्रस्तुत किए गए हैं। ये संस्था के घोषित उद्देश्य हैं; इससे यह दावा नहीं किया जा रहा कि सभी गतिविधियाँ वर्तमान में संचालित हो रही हैं।</p>
         <div class="objective-grid">
-          <article class="objective">
-            <div class="objective-num">01</div>
-            <div><h3 class="en">Environmental concerns</h3><h3 class="hi">पर्यावरण संरक्षण</h3><p class="en">Work towards addressing environmental problems.</p><p class="hi">पर्यावरण की समस्याओं के निराकरण हेतु कार्य करना।</p></div>
+          <article class="objective objective-with-photo">
+            <img class="objective-photo" src="gallery/environment.jpg" alt="environment activity" loading="lazy">
+            <div class="objective-content">
+              <div class="objective-num">01</div>
+              <div><h3 class="en">Environmental concerns</h3><h3 class="hi">पर्यावरण संरक्षण</h3>
+              <p class="en">Work towards addressing environmental problems.</p><p class="hi">पर्यावरण की समस्याओं के निराकरण हेतु कार्य करना।</p></div>
+            </div>
           </article>
-          <article class="objective">
-            <div class="objective-num">02</div>
-            <div><h3 class="en">Women and cottage industries</h3><h3 class="hi">महिला एवं कुटीर उद्योग</h3><p class="en">Encourage women to adopt cottage industries.</p><p class="hi">महिलाओं को कुटीर उद्योग अपनाने के लिए प्रोत्साहित करना।</p></div>
+          <article class="objective objective-with-photo">
+            <img class="objective-photo" src="gallery/livelihood.jpg" alt="livelihood activity" loading="lazy">
+            <div class="objective-content">
+              <div class="objective-num">02</div>
+              <div><h3 class="en">Women and cottage industries</h3><h3 class="hi">महिला एवं कुटीर उद्योग</h3>
+              <p class="en">Encourage women to adopt cottage industries.</p><p class="hi">महिलाओं को कुटीर उद्योग अपनाने के लिए प्रोत्साहित करना।</p></div>
+            </div>
           </article>
-          <article class="objective">
-            <div class="objective-num">03</div>
-            <div><h3 class="en">Sewing and embroidery skills</h3><h3 class="hi">सिलाई-कढ़ाई प्रशिक्षण</h3><p class="en">Make efforts to provide women with sewing and embroidery training to support self-employment.</p><p class="hi">महिलाओं को स्वरोजगार के लिए सिलाई-कढ़ाई का प्रशिक्षण देने का प्रयास करना।</p></div>
+          <article class="objective objective-with-photo">
+            <img class="objective-photo" src="gallery/education.jpg" alt="education activity" loading="lazy">
+            <div class="objective-content">
+              <div class="objective-num">03</div>
+              <div><h3 class="en">Sewing and embroidery skills</h3><h3 class="hi">सिलाई-कढ़ाई प्रशिक्षण</h3>
+              <p class="en">Make efforts to provide women with sewing and embroidery training to support self-employment.</p><p class="hi">महिलाओं को स्वरोजगार के लिए सिलाई-कढ़ाई का प्रशिक्षण देने का प्रयास करना।</p></div>
+            </div>
           </article>
-          <article class="objective">
-            <div class="objective-num">04</div>
-            <div><h3 class="en">Food preparation skills</h3><h3 class="hi">खाद्य सामग्री बनाने का प्रशिक्षण</h3><p class="en">Provide training for economically disadvantaged women in making pickles, preserves (murabba) and savoury snacks (namkeen).</p><p class="hi">आर्थिक रूप से कमजोर महिलाओं को अचार, मुरब्बा और नमकीन बनाने का प्रशिक्षण देना।</p></div>
+          <article class="objective objective-with-photo">
+            <img class="objective-photo" src="gallery/health-nutrition.jpg" alt="health and nutrition activity" loading="lazy">
+            <div class="objective-content">
+              <div class="objective-num">04</div>
+              <div><h3 class="en">Food preparation skills</h3><h3 class="hi">खाद्य सामग्री बनाने का प्रशिक्षण</h3>
+              <p class="en">Provide training for economically disadvantaged women in making pickles, preserves (murabba) and savoury snacks (namkeen).</p><p class="hi">आर्थिक रूप से कमजोर महिलाओं को अचार, मुरब्बा और नमकीन बनाने का प्रशिक्षण देना।</p></div>
+            </div>
           </article>
-          <article class="objective">
-            <div class="objective-num">05</div>
-            <div><h3 class="en">Education support</h3><h3 class="hi">निःशुल्क शिक्षा शिविर</h3><p class="en">Arrange free educational camps for children who lack access to education.</p><p class="hi">अशिक्षित बच्चों के लिए निःशुल्क शिक्षा शिविर की व्यवस्था करना।</p></div>
+          <article class="objective objective-with-photo">
+            <img class="objective-photo" src="gallery/education.jpg" alt="education activity" loading="lazy">
+            <div class="objective-content">
+              <div class="objective-num">05</div>
+              <div><h3 class="en">Education support</h3><h3 class="hi">निःशुल्क शिक्षा शिविर</h3>
+              <p class="en">Arrange free educational camps for children who lack access to education.</p><p class="hi">अशिक्षित बच्चों के लिए निःशुल्क शिक्षा शिविर की व्यवस्था करना।</p></div>
+            </div>
           </article>
-          <article class="objective">
-            <div class="objective-num">06</div>
-            <div><h3 class="en">Art and cultural awareness</h3><h3 class="hi">कला एवं सांस्कृतिक जागरूकता</h3><p class="en">Organise art exhibitions, lectures, fairs, art discussions, workshops and art camps at different places from time to time.</p><p class="hi">समय-समय पर विभिन्न स्थानों पर कला प्रदर्शनियाँ, व्याख्यान, मेले, कला संगोष्ठियाँ, कार्यशालाएँ और कला शिविर आयोजित करना।</p></div>
+          <article class="objective objective-with-photo">
+            <img class="objective-photo" src="gallery/art-culture.jpg" alt="art and culture activity" loading="lazy">
+            <div class="objective-content">
+              <div class="objective-num">06</div>
+              <div><h3 class="en">Art and cultural awareness</h3><h3 class="hi">कला एवं सांस्कृतिक जागरूकता</h3>
+              <p class="en">Organise art exhibitions, lectures, fairs, art discussions, workshops and art camps at different places from time to time.</p><p class="hi">समय-समय पर विभिन्न स्थानों पर कला प्रदर्शनियाँ, व्याख्यान, मेले, कला संगोष्ठियाँ, कार्यशालाएँ और कला शिविर आयोजित करना।</p></div>
+            </div>
           </article>
-          <article class="objective">
-            <div class="objective-num">07</div>
-            <div><h3 class="en">Community awareness and welfare</h3><h3 class="hi">जन-जागरूकता एवं कल्याण</h3><p class="en">Promote awareness in underserved urban and rural areas about cleanliness, literacy, family planning, child nutrition and government welfare schemes.</p><p class="hi">शहरी एवं ग्रामीण क्षेत्रों के पिछड़े इलाकों और मलिन बस्तियों में स्वच्छता, साक्षरता, परिवार नियोजन, शिशु पोषण तथा सरकारी कल्याणकारी योजनाओं के प्रति जागरूकता फैलाना।</p></div>
+          <article class="objective objective-with-photo">
+            <img class="objective-photo" src="gallery/welfare.jpg" alt="welfare activity" loading="lazy">
+            <div class="objective-content">
+              <div class="objective-num">07</div>
+              <div><h3 class="en">Community awareness and welfare</h3><h3 class="hi">जन-जागरूकता एवं कल्याण</h3>
+              <p class="en">Promote awareness in underserved urban and rural areas about cleanliness, literacy, family planning, child nutrition and government welfare schemes.</p><p class="hi">शहरी एवं ग्रामीण क्षेत्रों के पिछड़े इलाकों और मलिन बस्तियों में स्वच्छता, साक्षरता, परिवार नियोजन, शिशु पोषण तथा सरकारी कल्याणकारी योजनाओं के प्रति जागरूकता फैलाना।</p></div>
+            </div>
           </article>
         </div>
         <div class="note">
