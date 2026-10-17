@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aradhna Sewa Sanstha</title>
+  <meta name="description" content="Official website of Aradhna Sewa Sanstha.">
+</head>
+<body>
+  <header>
+    <h1>Aradhna Sewa Sanstha</h1>
+    <p>Welcome to our official website</p>
+  </header>
+
+  <main>
+    <h2>About Us</h2>
+    <p>We are working to serve the community.
+       More information about our organisation
+       and activities will be added soon.</p>
+
+    <h2>Our Activities</h2>
+    <p>Information about our social work and
+       community activities will appear here.</p>
+
+    <h2>Contact Us</h2>
+    <p>Email: Add your official contact email</p>
+    <p>Phone: Add your contact number</p>
+  </main>
+</body>
+</html>
